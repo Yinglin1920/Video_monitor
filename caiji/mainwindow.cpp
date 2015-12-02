@@ -106,6 +106,69 @@ void MainWindow::cut()
                          QMessageBox::Yes);
 }
 
+void MainWindow::whenshakerecoder()
+{
+    IplImage  *frame_l = cvQueryFrame(cam_l);// 从摄像头中抓取并返回每一帧
+   QImage image = QImage((const unsigned char*)frame_l->imageData,
+                         frame_l->width, frame_l->height,
+                         QImage::Format_RGB888).rgbSwapped();
+
+   QFile file("/home/pi/caiji2/shake.png");
+   if(!file.open(QIODevice::ReadWrite))
+   {
+       QMessageBox::warning(this , "waring" , "open file error" , QMessageBox::Yes ,
+                            QMessageBox::Yes);
+       return;
+   }
+   QByteArray ba;
+   QBuffer buffer(&ba);
+   buffer.open(QIODevice::WriteOnly);
+   image.save(&buffer,"png");
+   file.write(ba);
+
+}
+void MainWindow::whenfirerecorder()
+{
+    IplImage  *frame_l = cvQueryFrame(cam_l);// 从摄像头中抓取并返回每一帧
+   QImage image = QImage((const unsigned char*)frame_l->imageData,
+                         frame_l->width, frame_l->height,
+                         QImage::Format_RGB888).rgbSwapped();
+
+   QFile file("/home/pi/caiji2/fire.png");
+   if(!file.open(QIODevice::ReadWrite))
+   {
+       QMessageBox::warning(this , "waring" , "open file error" , QMessageBox::Yes ,
+                            QMessageBox::Yes);
+       return;
+   }
+   QByteArray ba;
+   QBuffer buffer(&ba);
+   buffer.open(QIODevice::WriteOnly);
+   image.save(&buffer,"png");
+   file.write(ba);
+
+}
+void MainWindow::whensmokerecoder()
+{
+    IplImage  *frame_l = cvQueryFrame(cam_l);// 从摄像头中抓取并返回每一帧
+   QImage image = QImage((const unsigned char*)frame_l->imageData,
+                         frame_l->width, frame_l->height,
+                         QImage::Format_RGB888).rgbSwapped();
+
+   QFile file("/home/pi/caiji2/smoke.png");
+   if(!file.open(QIODevice::ReadWrite))
+   {
+       QMessageBox::warning(this , "waring" , "open file error" , QMessageBox::Yes ,
+                            QMessageBox::Yes);
+       return;
+   }
+   QByteArray ba;
+   QBuffer buffer(&ba);
+   buffer.open(QIODevice::WriteOnly);
+   image.save(&buffer,"png");
+   file.write(ba);
+}
+
 void MainWindow::exit()
 {
     delete ui;
@@ -184,16 +247,20 @@ void MainWindow::SENSOR_ALEART(QString sensorName)
     {
         qDebug()<<"FLAME";
         ui->pushButton_flame->setStyleSheet( "QPushButton{border-image: url(:/res/flame.png);}");
+        whenfirerecorder();
     }
     if(sensorName=="SHAKE")      
     {
         qDebug()<<"SHAKE";
         ui->pushButton_shake->setStyleSheet( "QPushButton{border-image: url(:/res/shake.png);}");
+         whenshakerecoder();
+
     }
     if(sensorName=="SMOKE")
     {
         qDebug()<<"SMOKE";
         ui->pushButton_smoke->setStyleSheet( "QPushButton{border-image: url(:/res/smoke.png);}");
+        whensmokerecoder();
     }
    }
 

@@ -52,6 +52,10 @@ private:
     void createStatusBar();
 //    void LoadFile(const QString &fileName);
 
+    void whenshakerecoder();
+    void whenfirerecorder();
+    void whensmokerecoder();
+
     QMenu *fileMenu;
     QToolBar *fileToolBar;
 
