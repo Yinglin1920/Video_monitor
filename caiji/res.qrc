@@ -1,0 +1,40 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/down-arrow.png</file>
+        <file>res/down-arrow_unsel.png</file>
+        <file>res/left-arrow.png</file>
+        <file>res/left-arrow_unsel.png</file>
+        <file>res/lightbulb.png</file>
+        <file>res/lightbulb_unsel.png</file>
+        <file>res/next.png</file>
+        <file>res/pause.png</file>
+        <file>res/play.png</file>
+        <file>res/prev.png</file>
+        <file>res/right-arrow.png</file>
+        <file>res/right-arrow_unsel.png</file>
+        <file>res/up-arrow.png</file>
+        <file>res/up-arrow_unsel.png</file>
+        <file>res/cut.png</file>
+        <file>res/exit.png</file>
+        <file>res/next_unsel.png</file>
+        <file>res/open.png</file>
+        <file>res/pause_unsel.png</file>
+        <file>res/play_unsel.png</file>
+        <file>res/prev_unsel.png</file>
+        <file>res/save.png</file>
+        <file>res/stop.png</file>
+        <file>res/stop_unsel.png</file>
+        <file>res/openfile.png</file>
+        <file>res/openfile_unsel.png</file>
+        <file>res/flame.png</file>
+        <file>res/flame_unsel.png</file>
+        <file>res/gas.png</file>
+        <file>res/gas_unsel.png</file>
+        <file>res/smoke.png</file>
+        <file>res/smoke_unsel.png</file>
+        <file>res/shake.png</file>
+        <file>res/shake_unsel.png</file>
+        <file>res/recoder.png</file>
+        <file>res/recoder_unsel.png</file>
+    </qresource>
+</RCC>
