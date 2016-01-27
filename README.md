@@ -6,4 +6,4 @@ Linux-Qt VideoMonitor project with USB camera
 
 需要配置openCV与phonon库
 
-这个项目是学校找的外面的公司来带的，但是遇到的问题基本还是全靠百度，公司那边的人，其实只负催收责收文档，也只关心是否有东西可以展示给学校。QAQ
+
