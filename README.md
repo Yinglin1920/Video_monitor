@@ -1,4 +1,4 @@
-# camera
+# VideoMonitor
 Linux-Qt VideoMonitor project with USB camera
 
 这个项目是做的基于树莓的视频监控系统，实现了：
